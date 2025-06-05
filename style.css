@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+}
+
+header {
+  background: #000814;
+  padding: 1rem 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.logo {
+  height: 40px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero {
+  background: #001d3d;
+  color: white;
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 2rem;
+  background: #ffc300;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.services, .about, .contact {
+  padding: 4rem 1rem;
+}
+
+.services h2, .about h2, .contact h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  flex: 1;
+  min-width: 250px;
+  background: #f1f1f1;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact input, .contact textarea {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact button {
+  padding: 1rem;
+  background: #003566;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  background: #000814;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
