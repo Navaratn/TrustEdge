@@ -836,3 +836,12 @@
   background-color: #10b981;
   border-radius: 50%;
 }
+
+@media (max-width: 768px) {
+    .main-content {
+        width: 100%;
+    }
+    .sidebar {
+        display: none;
+    }
+}
