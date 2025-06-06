@@ -770,7 +770,8 @@
             gap: 40px;
         }
         .main-content {
-            width: calc(100% - 300px);
+            /* width: calc(100% - 300px); */
+            width: 100%;
         }
         .sidebar {
   width: 300px;
@@ -780,6 +781,7 @@
   box-sizing: border-box;
   position: fixed;
   right: 0;
+  display: none;
 }
 
 .menu ul {
