@@ -46,7 +46,7 @@
             align-items: center;
             gap: 0.15rem;
             font-size: 1.40rem;
-            font-weight: bold;
+             font-weight: bold;
         }
 
         .logo img {
@@ -120,7 +120,7 @@
 
         /* Hero Section */
         .hero {
-            min-height: 60vh;
+            min-height: 50vh;
             display: flex;
             align-items: center;
             justify-content: center;
