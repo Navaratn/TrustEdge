@@ -46,6 +46,7 @@ body {
   gap: 0.15rem;
   font-size: 1.4rem;
   font-weight: bold;
+  align-items: center;
 }
 
 .logo img {
@@ -651,11 +652,11 @@ body {
 }
 
 .contact-icon {
-  width: 64px;
-  height: 64px;
+  width: 32px;
+  height: 32px;
 }
 .contact-icon img {
-  width: 64px;
+  width: 32px;
   height: 100%;
 }
 .contact-details h4 {
