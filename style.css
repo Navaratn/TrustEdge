@@ -47,6 +47,8 @@ body {
   font-size: 1.4rem;
   align-items: center;
   font-weight: normal;
+  color: #fff;
+  text-decoration: none;
 }
 
 .logo img {
@@ -124,13 +126,20 @@ body {
   padding-left: 1rem;
 }
 
-.mobile-nav .dropdown.active .dropdown-content {
+.mobile-nav .dropdown-content.active {
   display: block;
 }
 
 .mobile-nav .dropdown-content a {
   padding: 0.75rem 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #d1d5db;
+  text-decoration: none;
+  display: block;
+  transition: color 0.2s ease;
+}
+
+.mobile-nav .dropdown-content a:hover {
+  color: #06b6d4;
 }
 
 /* Hero Section */
@@ -463,34 +472,7 @@ body {
 /* ... keep existing code (all remaining styles and animations) */
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
 
-  .mobile-menu-btn {
-    display: block;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .services-info {
-    display: none;
-  }
-
-  .section-title {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
-}
 
 @media (max-width: 640px) {
   .nav {
@@ -939,7 +921,7 @@ body {
   border-radius: 4px;
   top: 100%;
   left: 0;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 
 /* Add arrow to dropdown */
@@ -1014,4 +996,49 @@ body {
 }
 .hero-cloud-security {
   background-image: url(public/lovable-uploads/cloud-security.png);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .services-info {
+    display: none;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+#mobileNav .dropdown .nav-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#mobileNav .dropdown .nav-link::after {
+    content: "▼";
+    font-size: 0.8em;
+    margin-left: 8px;
+}
+
+#mobileNav .dropdown .nav-link.active::after {
+    transform: rotate(180deg);
 }

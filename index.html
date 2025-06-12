@@ -29,13 +29,13 @@
         <!-- Header -->
         <header class="header" id="header">
           <nav class="nav">
-            <div class="logo">
+            <a href="index.html" class="logo">
               <img
                 src="public/lovable-uploads/95f64e24-cb15-4702-9dbd-bd614cf1ede3.png"
                 alt="TrustEdge Middle East Logo"
               />
               <span>TrustEdge Middle East</span>
-            </div>
+            </a>
 
             <div class="nav-links">
               <a href="index.html" class="nav-link active">Home</a>
@@ -537,6 +537,14 @@
         mobileNav.classList.toggle("active");
       });
 
+      mobileNavDropdownItem = document.querySelector('#mobileNav .dropdown .nav-link');
+      mobileNavDropdownContent = document.querySelector('#mobileNav .dropdown .dropdown-content');
+      
+      mobileNavDropdownItem.addEventListener('click', (e) => {
+        e.preventDefault();
+        mobileNavDropdownContent.classList.toggle('active');
+      });
+
       // Scroll animations
       const observerOptions = {
         threshold: 0.1,
@@ -629,6 +637,7 @@
           }
         });
       }
+
     </script>
   </body>
 </html>
