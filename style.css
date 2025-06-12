@@ -304,8 +304,11 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+/* .mission-image img {
+  width: 70%;
+} */
 
-.about-right h3 {
+.about-right h3, .about-left h3 {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   color: #06b6d4;
