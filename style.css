@@ -1010,7 +1010,7 @@ body {
   background-image: url(public/lovable-uploads/IncidentResponse-Hero-Img.png);
 }
 .hero-training {
-  background-image: url(public/lovable-uploads/Training-Hero-Img.png);
+  background-image: url(public/lovable-uploads/Training-hero-img.png)!important;
 }
 .hero-cloud-security {
   background-image: url(public/lovable-uploads/cloud-security.png);
