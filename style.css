@@ -998,6 +998,9 @@ body {
   background-image: url(public/lovable-uploads/cloud-security.png);
 }
 
+.service-container p {
+  font-size: 1.5rem;
+}
 @media (max-width: 768px) {
   .nav-links {
     display: none;
