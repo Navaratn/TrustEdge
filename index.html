@@ -60,7 +60,10 @@
                       Training
                     </a>
                     <div class="sub-dropdown">
-                      <a href="comprehensive-training.html">Cyber Defense, Risk Mitigation and Incident Handling Training</a>
+                      <a href="comprehensive-training.html">
+                        <img src="public/CyberDefenseRiskMitigationTrainingSubMenuLogoImg.png" alt="Cyber Defense Training" class="menu-icon">
+                        Cyber Defense, Risk Mitigation and Incident Handling Training
+                      </a>
                     </div>
                   </div>
                   <a href="cloud-security.html">
@@ -98,7 +101,14 @@
                       Training
                     </a>
                     <div class="sub-dropdown">
-                      <a href="comprehensive-training.html">Cyber Defense, Risk Mitigation and Incident Handling Training</a>
+                      <a href="training.html">
+                        <img src="public/training.png" alt="Training" class="menu-icon">
+                        Training
+                      </a>
+                      <a href="comprehensive-training.html">
+                        <img src="public/CyberDefenseRiskMitigationTrainingSubMenuLogoImg.png" alt="Cyber Defense Training" class="menu-icon">
+                        Cyber Defense, Risk Mitigation and Incident Handling Training
+                      </a>
                     </div>
                   </div>
                   <a href="cloud-security.html">
@@ -583,6 +593,16 @@
       mobileNavDropdownItem.addEventListener('click', (e) => {
         e.preventDefault();
         mobileNavDropdownContent.classList.toggle('active');
+      });
+
+      // Handle Training submenu in mobile view
+      const trainingWrapper = document.querySelector('#mobileNav .training-wrapper');
+      const trainingLink = trainingWrapper.querySelector('a');
+      const trainingSubmenu = trainingWrapper.querySelector('.sub-dropdown');
+
+      trainingLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        trainingSubmenu.classList.toggle('active');
       });
 
       // Scroll animations

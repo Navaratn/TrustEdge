@@ -1094,7 +1094,7 @@ body {
   left: 100%;
   top: 0;
   min-width: 300px;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: #032c56;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -1124,6 +1124,11 @@ body {
   box-shadow: none;
   min-width: auto;
   background-color: rgba(255, 255, 255, 0.05);
+  display: none;
+}
+
+.mobile-nav .sub-dropdown.active {
+  display: block;
 }
 
 /* Menu icons */
