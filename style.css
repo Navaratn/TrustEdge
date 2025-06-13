@@ -1143,8 +1143,88 @@ body {
   display: flex;
   align-items: center;
 }
+.dropdown-content a:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
 .sub-dropdown a {
   display: flex;
   align-items: center;
+}
+
+/* Training Program Styles */
+.training-program {
+  padding: 4rem 0;
+  background-color: #032c56;
+}
+
+.training-program .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.training-program h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.training-program > .container > p {
+  font-size: 1.2rem;
+  color: #d1d5db;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.download-section {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.download-section h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.download-section p {
+  color: #d1d5db;
+  margin-bottom: 1.5rem;
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #06b6d4;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #0891b2;
+}
+
+.download-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Training modules styles */
+.training-modules {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
 }

@@ -21,6 +21,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <!-- Add EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+        emailjs.init("ulMaRM3eTxb_Aiind");
+      })();
+    </script>
   </head>
   <body>
     <div class="main-wrapper">
@@ -37,7 +44,7 @@
             </a>
 
             <div class="nav-links">
-              <a href="index.html" class="nav-link active">Home</a>
+              <a href="index.html" class="nav-link">Home</a>
               <div class="dropdown">
                 <a href="#" class="nav-link">Capabilities</a>
                 <div class="dropdown-content">
@@ -71,8 +78,8 @@
                   </a>
                 </div>
               </div>
-              <a href="resources.html" class="nav-link">Resources</a>
-              <a href="contact.html" class="nav-link">Contact Us</a>
+              <a href="index.html#services" class="nav-link">Resources</a>
+              <a href="contact.html" class="nav-link active">Contact Us</a>
             </div>
 
             <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
@@ -177,7 +184,7 @@
                 </div>
               </div>
 
-              <form class="contact-form">
+              <form class="contact-form" id="contact-form">
                 <div class="form-group">
                   <label for="name">Name</label>
                   <input
@@ -211,6 +218,7 @@
                 </div>
 
                 <button type="submit" class="submit-btn">Send Message</button>
+                <div id="form-status" class="form-status"></div>
               </form>
             </div>
           </div>
@@ -263,6 +271,40 @@
         </footer>
       </div>
     </div>
-    <script src="script.js"></script>
+
+    <script>
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const submitBtn = this.querySelector('.submit-btn');
+        const statusDiv = document.getElementById('form-status');
+        
+        // Disable submit button and show loading state
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        statusDiv.textContent = '';
+        
+        const templateParams = {
+          from_name: document.getElementById('name').value,
+          from_email: document.getElementById('email').value,
+          message: document.getElementById('message').value
+        };
+
+        emailjs.send('service_default', 'template_default', templateParams)
+          .then(function() {
+            statusDiv.textContent = 'Message sent successfully!';
+            statusDiv.style.color = 'green';
+            document.getElementById('contact-form').reset();
+          }, function(error) {
+            statusDiv.textContent = 'Failed to send message. Please try again.';
+            statusDiv.style.color = 'red';
+            console.error('EmailJS error:', error);
+          })
+          .finally(function() {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+          });
+      });
+    </script>
   </body>
 </html>
