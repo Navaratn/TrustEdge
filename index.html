@@ -22,6 +22,13 @@
     />
 
     <link rel="stylesheet" href="style.css" />
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+        emailjs.init("nqgp6e4pl_Ne7fw3H");
+      })();
+    </script>
   </head>
   <body>
     <div class="main-wrapper">
@@ -429,7 +436,7 @@
                 </div>
               </div>
 
-              <form class="contact-form">
+              <form class="contact-form" id="contact-form">
                 <div class="form-group">
                   <label for="name">Name</label>
                   <input
@@ -463,6 +470,7 @@
                 </div>
 
                 <button type="submit" class="submit-btn">Send Message</button>
+                <div id="form-status" class="form-status"></div>
               </form>
             </div>
           </div>
@@ -568,5 +576,6 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="email.js"></script>
   </body>
 </html>
